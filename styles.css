@@ -3,13 +3,14 @@
     background-position: 0px 0%;
   }
   100% {
-    background-position: 1014px 0%;
+    background-position: 1000px 0%;
   }
 }
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: url('https://stardewvalley.net/wp-content/uploads/2017/12/stardewbackground.png') no-repeat fixed center center / cover;
 }
 body header {
   height: 3.5rem;
@@ -120,5 +121,39 @@ nav .fa {
 #layer-3b {
   background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax3b.png');
   animation: slide 80s linear infinite;
-  opacity: 0.2;
+  opacity: 0.4;
+}
+#layer-4 {
+  background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax4.png');
+  background-position: bottom center;
+}
+#layer-5 {
+  background-image: url('https://www.stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax5.png');
+  background-position: bottom center;
+}
+#layer-6 {
+  background-image: url('https://www.stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax6.png');
+  background-position: bottom center;
+}
+#layer-7 {
+  background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax7.png');
+  background-position: bottom center;
+}
+#layer-8 {
+  background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax8.png');
+  background-position: bottom center;
+}
+#layer-9 {
+  background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax9.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+#layer-10 {
+  background-image: url('https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax10.png');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.content_break {
+  margin-top: 1000px;
+  height: 1000px;
 }

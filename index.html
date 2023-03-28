@@ -1,97 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Stardew Valley</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="./styles.css" />
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
-          rel="stylesheet">
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        castParallax()
+      })
+      const castParallax = () => {
+        const opThresh = 350
+        const opFactor = 750
+        window.addEventListener('scroll', (event) => {
+          const top = window.pageYOffset
+          const layers = document.querySelectorAll('.parallax')
+          layers.forEach((layer) => {
+            const speed = layer.dataset.speed
+            const yPos = -((top * speed) / 100)
+            layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`
+          })
+        })
+      }
+    </script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Foros</a></li>
-                    <li><a href="#">Wiki</a></li>
-                    <li><a href="#">Media</a></li>
-                    <li><a href="#">Merch</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Tabletop</a></li>
-                </ul>
-            </div>
-            <div class="nav-social-media">
-                <ul>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-reddit"></i></a></li>
-                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                    <li><a href="#"
-                           title="Discord"><img class="discord-icon"
-                                 src="https://www.stardewvalley.net/wp-content/uploads/2018/12/discord_app_white.png"></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav>
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Foros</a></li>
+            <li><a href="#">Wiki</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Merch</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Tabletop</a></li>
+          </ul>
+        </div>
+        <div class="nav-social-media">
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-reddit"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="#" title="Discord"><img class="discord-icon" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/discord_app_white.png" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <div class="panel" id="parallax">
-        <div class="layer" id="layer-1"></div>
-        <div class="layer" id="layer-2"></div>
-        <div class="layer" id="layer-3a"></div>
-        <div class="layer" id="layer-3b"></div>       
-        <div class="content_break"></div>
+      <div class="layer" id="layer-1"></div>
+      <div class="layer" id="layer-2"></div>
+      <div class="layer parallax" data-speed="15" id="layer-3a"></div>
+      <div class="layer parallax" data-speed="15" id="layer-3b"></div>
+      <div class="layer parallax" data-speed="65" id="layer-4"></div>
+      <div class="layer parallax" data-speed="70" id="layer-5"></div>
+      <div class="layer parallax" data-speed="78" id="layer-6"></div>
+      <div class="layer parallax" data-speed="89" id="layer-7"></div>
+      <div class="layer parallax" data-speed="100" id="layer-8"></div>
+      <div class="layer parallax" data-speed="100" id="layer-9"></div>
+      <div class="layer parallax" data-speed="100" id="layer-10"></div>
+      <div class="content_break"></div>
     </div>
-    <h1>Te mudas a stardew valley</h1>
-    <p> Has heredado la vieja parcela de la granja de tu abuelo en Stardew
-        Valley. Armado con herramientas heredadas y algunas monedas, ¡te
-        dispones a comenzar tu nueva vida! </p>
-    <div> slider </div>
-    <div>
+    <main>
+      <h1>Te mudas a stardew valley</h1>
+      <p>Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley. Armado con herramientas heredadas y algunas monedas, ¡te dispones a comenzar tu nueva vida!</p>
+      <div>slider</div>
+      <div>
         <h1>Características</h1>
         <ul>
-            <li>Crea la granja de tus sueños: ¡Convierte tus campos abandonados
-                en una granja próspera y animada!</li>
-            <li>Aprende a vivir de la tierra: ¡Cría animales, pesca, cultiva,
-                fabrica objetos o haz todo lo que desees! La elección es tuya...
-            </li>
-            <li>Conviértete en parte de la comunidad local: ¡Pelican Town es el
-                hogar de más de 30 residentes a los que puedes hacer amigos!
-            </li>
-            <li>Encuentra a alguien especial: Con 12 habitantes de la ciudad
-                para tener citas, ¡incluso puedes encontrar a alguien con quien
-                formar una familia!</li>
-            <li>Explora vastas y misteriosas cuevas: ¡Enfrenta a peligrosos
-                monstruos y encuentra valiosos tesoros bajo tierra!</li>
-            <li>Personaliza: ¡Hay cientos de opciones de personajes y
-                decoraciones para el hogar para elegir!</li>
+          <li>Crea la granja de tus sueños: ¡Convierte tus campos abandonados en una granja próspera y animada!</li>
+          <li>Aprende a vivir de la tierra: ¡Cría animales, pesca, cultiva, fabrica objetos o haz todo lo que desees! La elección es tuya...</li>
+          <li>Conviértete en parte de la comunidad local: ¡Pelican Town es el hogar de más de 30 residentes a los que puedes hacer amigos!</li>
+          <li>Encuentra a alguien especial: Con 12 habitantes de la ciudad para tener citas, ¡incluso puedes encontrar a alguien con quien formar una familia!</li>
+          <li>Explora vastas y misteriosas cuevas: ¡Enfrenta a peligrosos monstruos y encuentra valiosos tesoros bajo tierra!</li>
+          <li>Personaliza: ¡Hay cientos de opciones de personajes y decoraciones para el hogar para elegir!</li>
         </ul>
-    </div>
-    <div> Logos </div>
-    <div> Logos Dev <p>Stardew Valley Copyright © 2016-2023 ConcernedApe LLC</p>
-        <p>The term “Grange” is a registered trademark of the National Grange of
-            the Order of Patrons of Husbandry.</p>
-    </div>
-    <footer>
+      </div>
+      <div>Logos</div>
+      <div>
+        Logos Dev
+        <p>Stardew Valley Copyright © 2016-2023 ConcernedApe LLC</p>
+        <p>The term “Grange” is a registered trademark of the National Grange of the Order of Patrons of Husbandry.</p>
+      </div>
+      <footer>
         <a href="#">Privacy Policy</a>
         <a href="#">Terminos de uso</a>
-    </footer>
+      </footer>
     </main>
-</body>
-
+  </body>
 </html>
