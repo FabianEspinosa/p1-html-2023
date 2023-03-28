@@ -11,12 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        castParallax()
-      })
+     
       const castParallax = () => {
-        const opThresh = 350
-        const opFactor = 750
         window.addEventListener('scroll', (event) => {
           const top = window.pageYOffset
           const layers = document.querySelectorAll('.parallax')
@@ -27,6 +23,7 @@
           })
         })
       }
+      document.addEventListener('DOMContentLoaded', castParallax)
     </script>
   </head>
 
@@ -80,6 +77,7 @@
       <div class="layer parallax" data-speed="100" id="layer-10"></div>
       <div class="content_break"></div>
     </div>
+    <div id="farm"></div>
     <main>
       <h1>Te mudas a stardew valley</h1>
       <p>Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley. Armado con herramientas heredadas y algunas monedas, ¡te dispones a comenzar tu nueva vida!</p>
