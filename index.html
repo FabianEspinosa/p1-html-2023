@@ -5,26 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://www.stardewvalley.net/wp-content/uploads/2017/12/cropped-chickenfavicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet" />
-    <script>
-     
-      const castParallax = () => {
-        window.addEventListener('scroll', (event) => {
-          const top = window.pageYOffset
-          const layers = document.querySelectorAll('.parallax')
-          layers.forEach((layer) => {
-            const speed = layer.dataset.speed
-            const yPos = -((top * speed) / 100)
-            layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`
-          })
-        })
-      }
-      document.addEventListener('DOMContentLoaded', castParallax)
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="./script.js"></script>
   </head>
 
   <body>
@@ -63,6 +51,9 @@
         </div>
       </nav>
     </header>
+    <div class="logo">
+      <img src="https://stardewvalley.net/wp-content/uploads/2017/12/main_logo.png" alt="Stardew Valley" />
+    </div>
     <div class="panel" id="parallax">
       <div class="layer" id="layer-1"></div>
       <div class="layer" id="layer-2"></div>
@@ -80,8 +71,22 @@
     <div id="farm"></div>
     <main>
       <h1>Te mudas a stardew valley</h1>
-      <p>Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley. Armado con herramientas heredadas y algunas monedas, ¡te dispones a comenzar tu nueva vida!</p>
-      <div>slider</div>
+      <p class="description">
+        Has heredado la vieja parcela de la granja de tu abuelo en <span>Stardew Valley.</span> Armado con herramientas heredadas y algunas monedas, ¡te dispones a comenzar tu nueva vida!
+      </p>
+
+      <div id="slider" class="slider-container">
+        <img alt="img 1 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/1_1screenshot15.png" />
+        <img alt="img 2 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/NightMarket-1-1.png" />
+        <img alt="img 3 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/Multiplayer_Screenshot2-1.png" />
+        <img alt="img 4 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/StardewValley_12-1.png" />
+        <img alt="img 5 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/StardewValley_4.png" />
+        <img alt="img 6 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/StardewValley_11.png" />
+        <img alt="img 7 slider" src="https://www.stardewvalley.net/wp-content/uploads/2018/12/StardewValley_5.png" />
+        <div id="prevBtn" class="slider-btn"><span class="text-button">&#10094;</span></div>
+        <div id="nextBtn" class="slider-btn"><span class="text-button">&#10095;</span></div>
+      </div>
+
       <div>
         <h1>Características</h1>
         <ul>
