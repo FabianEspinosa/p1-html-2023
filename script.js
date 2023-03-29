@@ -9,4 +9,34 @@ const castParallax = () => {
     })
   })
 }
-document.addEventListener('DOMContentLoaded', castParallax)
+document.addEventListener('DOMContentLoaded', () => {
+  castParallax()
+  let slideIndex = 1
+  const slides = document.querySelectorAll('#slider img')
+  const totalSlides = slides.length
+  const prevBtn = document.querySelector('#prevBtn')
+  const nextBtn = document.querySelector('#nextBtn')
+  const showSlides = (n) => {
+    if (n > totalSlides) {
+      slideIndex = 1
+    } else if (n < 1) {
+      slideIndex = totalSlides
+    } else {
+      slideIndex = n
+    }
+    for (let i = 0; i < totalSlides; i++) {
+      slides[i].style.display = 'none'
+    }
+    slides[slideIndex - 1].style.display = 'block'
+  }
+  const plusSlides = (n) => {
+    showSlides((slideIndex += n))
+  }
+  prevBtn.addEventListener('click', function () {
+    plusSlides(-1)
+  })
+  nextBtn.addEventListener('click', function () {
+    plusSlides(1)
+  })
+  showSlides(slideIndex)
+})
