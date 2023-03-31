@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       slideIndex = n
     }
-    console.log(slideIndex)
-    console.log(n)
     if (btn === 'nextBtn') {
       if (n > totalSlides) {
         slides[0].style.zIndex = 2
